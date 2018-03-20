@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Ray Lee",
+      "authorEmail": "rhlee@berkeley.edu",
+      "authorUrl": ""
+    }
+  }
+}
