@@ -1,5 +1,4 @@
-# generator-cspace-ui-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> 
+# generator-cspace-ui-plugin
 
 ## Installation
 
@@ -25,12 +24,4 @@ yo cspace-ui-plugin
 
 ## License
 
-Apache-2.0 © [Ray Lee]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-cspace-ui-plugin.svg
-[npm-url]: https://npmjs.org/package/generator-cspace-ui-plugin
-[travis-image]: https://travis-ci.org/ray-lee/generator-cspace-ui-plugin.svg?branch=master
-[travis-url]: https://travis-ci.org/ray-lee/generator-cspace-ui-plugin
-[daviddm-image]: https://david-dm.org/ray-lee/generator-cspace-ui-plugin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/ray-lee/generator-cspace-ui-plugin
+ECL-2.0
