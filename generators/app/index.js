@@ -87,6 +87,11 @@ module.exports = class extends Generator {
       },
     );
 
+    this.fs.move(
+      this.destinationPath('._gitignore'),
+      this.destinationPath('.gitignore'),
+    );
+
     if (this.fs.exists(
       this.destinationPath('styles/cspace-ui-plugin-pluginType/pluginName.css')
     )) {

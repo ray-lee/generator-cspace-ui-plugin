@@ -1,6 +1,6 @@
 {
   "name": "generator-cspace-ui-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Scaffold out a CollectionSpace UI plugin",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "files": [
