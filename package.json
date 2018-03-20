@@ -1,6 +1,6 @@
 {
   "name": "generator-cspace-ui-plugin",
-  "version": "0.0.2",
+  "version": "0.0.16",
   "description": "Scaffold out a CollectionSpace UI plugin",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "files": [
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "gulp-rename": "^1.2.2",
     "lodash": "^4.17.5",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"

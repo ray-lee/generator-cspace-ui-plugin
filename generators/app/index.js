@@ -2,12 +2,28 @@
 
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
+const rename = require('gulp-rename');
 const _ = require('lodash');
 const mkdirp = require('mkdirp');
 const path = require('path');
 const yosay = require('yosay');
 
 module.exports = class extends Generator {
+  initializing() {
+    this.registerTransformStream(rename((path) => {
+      // Remove leading _ from template file names.
+
+      if (path.basename.startsWith('_')) {
+        path.basename = path.basename.substring(1);
+
+        if (path.basename === '') {
+          path.basename = path.extname;
+          path.extname = '';
+        }
+      }
+    }));
+  }
+
   prompting() {
     this.log(
       yosay(`Welcome to the ${chalk.red('cspace-ui plugin')} generator!`)
@@ -37,7 +53,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         when: answers => answers.pluginType === 'profile',
-        name: 'profileTenantID',
+        name: 'tenantID',
         message: 'What is the tenant ID of the profile?',
       },
     ];
@@ -76,7 +92,7 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copyTpl(
-      this.templatePath('**/*'),
+      this.templatePath('**'),
       this.destinationPath(),
       this.props,
       {},
@@ -85,11 +101,6 @@ module.exports = class extends Generator {
           dot: true,
         },
       },
-    );
-
-    this.fs.move(
-      this.destinationPath('._gitignore'),
-      this.destinationPath('.gitignore'),
     );
 
     if (this.fs.exists(
