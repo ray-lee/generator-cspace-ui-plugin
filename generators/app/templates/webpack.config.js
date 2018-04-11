@@ -58,6 +58,14 @@ const config = {
       [`${library}.packageName`]: JSON.stringify(process.env.npm_package_name),
       [`${library}.packageVersion`]: JSON.stringify(process.env.npm_package_version),
     }),
+    // Replace react-intl with a stub. For messages to be extracted by babel-plugin-react-intl,
+    // react-intl must be imported, and the defineMessages marker function must be called. This
+    // would cause the entire react-intl package to be bundled with this package, needlessly
+    // increasing its size.
+    new webpack.NormalModuleReplacementPlugin(
+      /^react-intl$/,
+      path.resolve(__dirname, 'react-intl-stub.js')
+    ),
     new webpack.optimize.ModuleConcatenationPlugin(),
   ],
   resolve: {
