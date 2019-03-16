@@ -1,6 +1,6 @@
 {
   "name": "generator-cspace-ui-plugin",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Scaffold out a CollectionSpace UI plugin",
   "author": "Ray Lee <rhlee@berkeley.edu>",
   "files": [
@@ -16,9 +16,8 @@
     "eslint-config-xo": "^0.22.2",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
-    "jest": "^22.4.4",
+    "jest": "^24.5.0",
     "lint-staged": "^7.2.0",
-    "nsp": "^3.2.1",
     "prettier": "^1.14.0",
     "yeoman-assert": "^3.1.1",
     "yeoman-test": "^1.9.1"
@@ -34,7 +33,6 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "test": "jest"
