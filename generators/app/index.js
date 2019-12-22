@@ -110,9 +110,7 @@ module.exports = class extends Generator {
   default() {
     if (path.basename(this.destinationPath()) !== this.props.repoName) {
       this.log(
-        `Your plugin must be inside a folder named ${
-          this.props.repoName
-        }.\nI'll create this folder.`
+        `Your plugin must be inside a folder named ${this.props.repoName}.\nI'll create this folder.`
       );
 
       mkdirp(this.props.repoName);
