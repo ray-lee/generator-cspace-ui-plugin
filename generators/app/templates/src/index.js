@@ -20,6 +20,12 @@ export default () => ({
           defaultMessage: '<%= pluginDisplayName %> <%= pluginType %>',
         },
       }),
+      packageName: <%= libraryName %>.packageName,
+      packageVersion: <%= libraryName %>.packageVersion,
+      buildNum: <%= libraryName %>.buildNum,
+      repositoryUrl: <%= libraryName %>.repositoryUrl,
+      // packageVersion is now preferred, but keep version for backward compatibility with older
+      // versions of cspace-ui.
       version: <%= libraryName %>.packageVersion,
     },
   },
