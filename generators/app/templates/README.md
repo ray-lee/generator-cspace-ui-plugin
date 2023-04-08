@@ -1,7 +1,5 @@
 # <%= packageName %>
 
-[![build status](https://travis-ci.org/collectionspace/<%= repoName %>.svg?branch=master)](https://travis-ci.org/collectionspace/<%= repoName %>)
-
 <%= packageDesc %>.
 
 ## Installation
