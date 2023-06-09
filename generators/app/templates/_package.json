@@ -59,6 +59,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^6.2.0",
+    "http-proxy-middleware": "^2.0.6",
     "istanbul": "^0.4.5",
     "karma": "^6.4.1",
     "karma-chai": "^0.1.0",

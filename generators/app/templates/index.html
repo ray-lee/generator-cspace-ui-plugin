@@ -6,6 +6,9 @@
 
   Use the command: npm run devserver
   Then open a browser to: http://localhost:8080
+
+  Note that this file is not used when the --back-end option is supplied to npm run devserver,
+  unless the --local-index option is also supplied, and set to the path to this file.
 -->
 <html>
 <head>
@@ -23,10 +26,10 @@
     <%= libraryName %> function into the global namespace.
 
     webpack dev server generates a JS bundle into memory, and updates it as files are edited.
-    This bundle is served from the URL /<%= libraryName %>.js, but it does not exist in
+    This bundle is served from the URL /webpack-dev-assets/<%= libraryName %>.js, but it does not exist in
     the filesystem.
   -->
-  <script src="/<%= libraryName %>.js"></script>
+  <script src="/webpack-dev-assets/<%= libraryName %>.js"></script>
 </head>
 <body>
   <div id="cspace"></div>
